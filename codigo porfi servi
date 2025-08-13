@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THE BLOCK</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: white;
+      text-align: center;
+    }
+
+    header {
+      padding: 50px 20px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    h1 {
+      font-size: 4rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: auto;
+      line-height: 1.5;
+      color: #ccc;
+    }
+
+    .galeria {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 40px 20px;
+      background-color: #1a1a1a;
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    .galeria img {
+      width: 250px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 2px solid #ff4500;
+      transition: transform 0.3s;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.05);
+    }
+
+    .contacto {
+      padding: 40px 20px;
+      background-color: #222;
+      animation: fadeIn 4s ease-in-out;
+    }
+
+    .contacto h2 {
+      margin-bottom: 20px;
+    }
+
+    .contacto button {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      background-color: #ff4500;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .contacto button:hover {
+      background-color: #ff6a33;
+    }
+
+    .info {
+      display: none;
+      margin-top: 15px;
+      padding: 15px;
+      background-color: #333;
+      border-radius: 5px;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Presentación -->
+  <header>
+    <h1>THE BLOCK</h1>
+    <p>
+     THE BLOCK es una empresa privada especializada en el diseño, planificación y ejecución de proyectos arquitectónicos y de ingeniería civil para los sectores residencial, comercial e industrial.
+
+Contamos con áreas de trabajo dirigidas por profesionales altamente calificados, que aplican metodologías de gestión y control de calidad bajo estándares nacionales e internacionales.
+
+Nuestro enfoque integra principios de sostenibilidad, eficiencia energética y optimización de recursos, garantizando el desarrollo de espacios inteligentes, sustentables y de alta calidad constructiva.
+
+Implementamos procesos de innovación continua, incorporando tecnologías avanzadas de modelado BIM (Building Information Modeling), sistemas de gestión de obra y soluciones constructivas de última generación.
+
+En THE BLOCK, concebimos cada proyecto como una inversión estratégica, desde la concepción del diseño hasta la entrega final, asegurando cumplimiento de plazos, presupuestos y normativas vigentes. Construimos hoy las infraestructuras que definirán el futuro.
+
+
+    </p>
+  </header>
+
+  <!-- Galería -->
+  <section class="galeria">
+    <img src="https://th.bing.com/th/id/OIP.b9NAfVe5YJTjQpTtgsIbowHaEU" alt="Residencial">
+    <img src="https://th.bing.com/th/id/OIP.Hifo9w7VydbDKrLVCHn5vAHaE7" alt="Comercial">
+    <img src="https://th.bing.com/th/id/OIP.ehqw2FOXPEqvAcvgXHSh-AHaFj" alt="Industrial">
+  </section>
+<style>
+  .info {
+    display: none; /* oculto por defecto */
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #333;
+    border-radius: 5px;
+  }
+
+  /* Si quieres que aparezca con efecto */
+  .info.show {
+    display: block;
+    animation: fadeIn 0.4s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactos THE BLOCK</title>
+    <style>
+        /* Estilo base mejorado */
+        body {
+            background-color: #121212;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .contact-container {
+            background: rgba(30, 30, 30, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 69, 0, 0.1);
+            max-width: 800px;
+            width: 100%;
+        }
+        
+        h2 {
+            color: #ff4500;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        
+        /* Botones premium */
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-btn {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+            transform-style: preserve-3d;
+        }
+        
+        .contact-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, 
+                          rgba(255,255,255,0.3) 0%, 
+                          rgba(255,255,255,0) 60%);
+            transform: translateY(100%);
+            transition: transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+        }
+        
+        .contact-btn:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
+        }
+        
+        .contact-btn:hover::before {
+            transform: translateY(0);
+        }
+        
+        .contact-btn:active {
+            transform: translateY(0) scale(0.98);
+        }
+        
+        /* Estilos específicos con gradientes mejorados */
+        .btn-instagram {
+            background: linear-gradient(45deg, 
+                          #405DE6 0%, #5851DB 15%, 
+                          #833AB4 35%, #C13584 55%, 
+                          #E1306C 70%, #FD1D1D 85%, 
+                          #F56040 100%);
+        }
+        
+        .btn-whatsapp {
+            background: linear-gradient(135deg, 
+                          #25D366 0%, #128C7E 100%);
+        }
+        
+        .btn-email {
+            background: linear-gradient(135deg, 
+                          #EA4335 0%, #D14836 100%);
+        }
+        
+        /* Tarjetas de información premium */
+        .contact-info {
+            display: none;
+            margin-top: 30px;
+            padding: 25px;
+            background: rgba(40, 40, 40, 0.7);
+            border-radius: 15px;
+            color: white;
+            animation: fadeInUp 0.5s ease-out forwards;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            border-left: 4px solid #ff4500;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transform-origin: top center;
+        }
+        
+        .contact-info p {
+            margin: 0;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            text-align: center;
+        }
+        
+        .contact-info a {
+            color: #ff6d00;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+            margin-top: 10px;
+            border-bottom: 2px solid transparent;
+        }
+        
+        .contact-info a:hover {
+            color: #ff8c00;
+            border-bottom-color: #ff8c00;
+        }
+        
+        /* Animaciones mejoradas */
+        @keyframes fadeInUp {
+            from { 
+                opacity: 0; 
+                transform: translateY(20px) perspective(500px) rotateX(10deg);
+            }
+            to { 
+                opacity: 1; 
+                transform: translateY(0) perspective(500px) rotateX(0);
+            }
+        }
+        
+        /* Efecto de brillo al pasar el mouse */
+        .contact-btn::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.1);
+            transform: rotate(45deg) translate(-20%, 150%);
+            transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        
+        .contact-btn:hover::after {
+            transform: rotate(45deg) translate(20%, -100%);
+        }
+        
+        /* Responsive */
+        @media (max-width: 600px) {
+            .contact-buttons {
+                gap: 20px;
+            }
+            
+            .contact-btn {
+                width: 75px;
+                height: 75px;
+                font-size: 30px;
+            }
+            
+            .contact-info {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-container">
+        <h2>Contáctanos</h2>
+        
+        <div class="contact-buttons">
+            <!-- Botón de Instagram -->
+            <button class="contact-btn btn-instagram" onclick="showContactInfo('instagram')">📷</button>
+            
+            <!-- Botón de WhatsApp -->
+            <button class="contact-btn btn-whatsapp" onclick="showContactInfo('whatsapp')">📱</button>
+            
+            <!-- Botón de Email -->
+            <button class="contact-btn btn-email" onclick="showContactInfo('email')">✉️</button>
+        </div>
+        
+        <!-- Información de Instagram -->
+        <div id="instagram-info" class="contact-info">
+            <p>Descubre nuestro trabajo en Instagram</p>
+            <a href="https://www.instagram.com/theblock.srl?igsh=MXJ4MWxnMWMzemZicA==" target="_blank">
+                @theblock.srl
+            </a>
+        </div>
+        
+        <!-- Información de WhatsApp -->
+        <div id="whatsapp-info" class="contact-info">
+            <p>Habla directamente con nuestro equipo</p>
+            <a href="https://wa.me/5491112345678" target="_blank">
+                +54 9 11 1234-5678
+            </a>
+        </div>
+        
+        <!-- Información de Email -->
+        <div id="email-info" class="contact-info">
+            <p>Envíanos un correo electrónico</p>
+            <a href="mailto:theblocksrll@gmail.com">
+                theblocksrll@gmail.com
+            </a>
+        </div>
+    </div>
+    
+    <script>
+        function showContactInfo(contactType) {
+            // Oculta toda la información primero con animación
+            document.querySelectorAll('.contact-info').forEach(info => {
+                info.style.animation = 'fadeInUp 0.3s ease reverse forwards';
+                setTimeout(() => {
+                    info.style.display = 'none';
+                }, 300);
+            });
+            
+            // Muestra solo la información seleccionada con animación
+            setTimeout(() => {
+                const infoElement = document.getElementById(`${contactType}-info`);
+                infoElement.style.display = 'block';
+                infoElement.style.animation = 'fadeInUp 0.5s ease forwards';
+            }, 300);
+        }
+    </script>
+</body>
+</html>
+  </section>
+
+  <script>
+    function mostrarInfo(id) {
+      // Oculta todos los cuadros de info
+      document.querySelectorAll('.info').forEach(div => {
+        div.style.display = 'none';
+      });
+      // Muestra solo el cuadro clickeado
+      document.getElementById(id).style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>THE BLOCK — Nuestras Construcciones</title>
+  <style>
+    :root{
+      --bg:#0f1113;
+      --card:#151718;
+      --accent:#ff4500;
+      --muted:#bfc3c6;
+      --glass: rgba(255,255,255,0.03);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Inter, system-ui, Arial, sans-serif;
+      background:var(--bg);
+      color:#fff;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:40px 20px;
+    }
+
+    .section {
+      max-width:1100px;
+      margin:0 auto;
+    }
+
+    .title {
+      text-align:center;
+      margin-bottom:18px;
+      animation: fadeInUp .7s ease both;
+    }
+    .title h2{
+      font-size:2.2rem;
+      letter-spacing:1px;
+      margin:0;
+      color:#fff;
+    }
+    .title p{
+      margin:8px 0 0;
+      color:var(--muted);
+      max-width:820px;
+      margin-left:auto;
+      margin-right:auto;
+    }
+
+    /* grid */
+    .grid {
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:18px;
+      margin-top:28px;
+      align-items:start;
+    }
+
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), var(--glass));
+      border:1px solid rgba(255,255,255,0.04);
+      border-radius:10px;
+      overflow:hidden;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+      transition: transform .24s ease, box-shadow .24s ease;
+      cursor: pointer;
+      animation: fadeIn .8s ease both;
+      display:flex;
+      flex-direction:column;
+    }
+    .card:hover{
+      transform: translateY(-6px);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.7);
+    }
+
+    .thumb{
+      width:100%;
+      height:150px;
+      object-fit:cover;
+      display:block;
+    }
+
+    .card-body{
+      padding:14px;
+      text-align:left;
+    }
+    .card-body h3{
+      margin:0 0 6px;
+      font-size:1.05rem;
+      color:#fff;
+    }
+    .card-body p{
+      margin:0;
+      color:var(--muted);
+      font-size:0.92rem;
+      line-height:1.3;
+    }
+
+    .meta {
+      margin-top:10px;
+      display:flex;
+      gap:8px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+    .tag {
+      font-size:0.78rem;
+      background:rgba(255,69,0,0.12);
+      color:var(--accent);
+      padding:5px 8px;
+      border-radius:6px;
+    }
+
+    /* lightbox modal */
+    .modal {
+      position:fixed;
+      inset:0;
+      display:none;
+      align-items:center;
+      justify-content:center;
+      background:rgba(0,0,0,0.7);
+      z-index:9999;
+      padding:28px;
+    }
+    .modal.open{ display:flex; animation: fadeIn .18s ease both; }
+    .modal-card{
+      max-width:1000px;
+      width:100%;
+      background: #0b0b0c;
+      border-radius:10px;
+      overflow:hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.7);
+      display:flex;
+      gap:12px;
+      align-items:stretch;
+    }
+    .modal-img{
+      width:60%;
+      min-height:300px;
+      object-fit:cover;
+      background:#222;
+      display:block;
+    }
+    .modal-info{
+      padding:18px;
+      color:var(--muted);
+      width:40%;
+    }
+    .modal-info h4{ color:#fff; margin:0 0 8px; }
+    .close{
+      position:absolute;
+      top:18px;
+      right:18px;
+      background:rgba(255,255,255,0.06);
+      border:1px solid rgba(255,255,255,0.06);
+      color:#fff;
+      width:40px;
+      height:40px;
+      border-radius:8px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      cursor:pointer;
+    }
+
+    /* responsive modal stack */
+    @media (max-width:800px){
+      .modal-card{ flex-direction:column; }
+      .modal-img{ width:100%; height:240px; }
+      .modal-info{ width:100%; }
+    }
+
+    /* small helpers */
+    .muted { color:var(--muted); font-size:0.92rem }
+    .center { text-align:center }
+
+    /* animations */
+    @keyframes fadeIn { from{opacity:0} to{opacity:1} }
+    @keyframes fadeInUp { from{opacity:0; transform:translateY(8px)} to{opacity:1; transform:none} }
+
+  </style>
+</head>
+<body>
+
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>THE BLOCK — Nuestras Construcciones</title>
+  <style>
+    :root{
+      --bg:#0f1113;
+      --card:#151718;
+      --accent:#ff4500;
+      --muted:#bfc3c6;
+      --glass: rgba(255,255,255,0.03);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Inter, system-ui, Arial, sans-serif;
+      background:var(--bg);
+      color:#fff;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:40px 20px;
+    }
+
+    .section {
+      max-width:1100px;
+      margin:0 auto;
+    }
+
+    .title {
+      text-align:center;
+      margin-bottom:18px;
+      animation: fadeInUp .7s ease both;
+    }
+    .title h2{
+      font-size:2.2rem;
+      letter-spacing:1px;
+      margin:0;
+      color:#fff;
+    }
+    .title p{
+      margin:8px 0 0;
+      color:var(--muted);
+      max-width:820px;
+      margin-left:auto;
+      margin-right:auto;
+    }
+
+    /* grid */
+    .grid {
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap:18px;
+      margin-top:28px;
+      align-items:start;
+    }
+
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), var(--glass));
+      border:1px solid rgba(255,255,255,0.04);
+      border-radius:10px;
+      overflow:hidden;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+      transition: transform .24s ease, box-shadow .24s ease;
+      cursor: pointer;
+      animation: fadeIn .8s ease both;
+      display:flex;
+      flex-direction:column;
+    }
+    .card:hover{
+      transform: translateY(-6px);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.7);
+    }
+
+    .thumb{
+      width:100%;
+      height:150px;
+      object-fit:cover;
+      display:block;
+    }
+
+    .card-body{
+      padding:14px;
+      text-align:left;
+    }
+    .card-body h3{
+      margin:0 0 6px;
+      font-size:1.05rem;
+      color:#fff;
+    }
+    .card-body p{
+      margin:0;
+      color:var(--muted);
+      font-size:0.92rem;
+      line-height:1.3;
+    }
+
+    .meta {
+      margin-top:10px;
+      display:flex;
+      gap:8px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+    .tag {
+      font-size:0.78rem;
+      background:rgba(255,69,0,0.12);
+      color:var(--accent);
+      padding:5px 8px;
+      border-radius:6px;
+    }
+
+    /* lightbox modal */
+    .modal {
+      position:fixed;
+      inset:0;
+      display:none;
+      align-items:center;
+      justify-content:center;
+      background:rgba(0,0,0,0.7);
+      z-index:9999;
+      padding:28px;
+    }
+    .modal.open{ display:flex; animation: fadeIn .18s ease both; }
+    .modal-card{
+      max-width:1000px;
+      width:100%;
+      background: #0b0b0c;
+      border-radius:10px;
+      overflow:hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.7);
+      display:flex;
+      gap:12px;
+      align-items:stretch;
+    }
+    .modal-img{
+      width:60%;
+      min-height:300px;
+      object-fit:cover;
+      background:#222;
+      display:block;
+    }
+    .modal-info{
+      padding:18px;
+      color:var(--muted);
+      width:40%;
+    }
+    .modal-info h4{ color:#fff; margin:0 0 8px; }
+    .close{
+      position:absolute;
+      top:18px;
+      right:18px;
+      background:rgba(255,255,255,0.06);
+      border:1px solid rgba(255,255,255,0.06);
+      color:#fff;
+      width:40px;
+      height:40px;
+      border-radius:8px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      cursor:pointer;
+    }
+
+    /* responsive modal stack */
+    @media (max-width:800px){
+      .modal-card{ flex-direction:column; }
+      .modal-img{ width:100%; height:240px; }
+      .modal-info{ width:100%; }
+    }
+
+    /* small helpers */
+    .muted { color:var(--muted); font-size:0.92rem }
+    .center { text-align:center }
+
+    /* animations */
+    @keyframes fadeIn { from{opacity:0} to{opacity:1} }
+    @keyframes fadeInUp { from{opacity:0; transform:translateY(8px)} to{opacity:1; transform:none} }
+
+  </style>
+</head>
+<body>
+
+  <section class="section">
+    <div class="title">
+      <h2>NUESTRAS CONSTRUCCIONES</h2>
+      <p>Galería representativa de proyectos desarrollados por THE BLOCK. Hacé clic en cualquier proyecto para verlo en mayor detalle.</p>
+    </div>
+
+    <div class="grid" id="projectsGrid">
+      <!-- Card template: data-* attributes used to populate modal -->
+      <div class="card" tabindex="0" role="button"
+           data-title="Residencial - Casa Rivera"
+           data-desc="Vivienda unifamiliar con diseño bioclimático y materiales sustentables."
+           data-img="https://via.placeholder.com/1200x800?text=Residencial+Casa+Rivera">
+        <img class="thumb" src="https://inspirahogar.com/wp-content/uploads/2017/05/003-contemporary-house-madden-building-group-1050x701.jpg" alt="Residencial">
+        <div class="card-body">
+          <h3>Residencial — Casa Rivera</h3>
+          <p class="muted">Vivienda unifamiliar, 180 m², enfoque en eficiencia energética.</p>
+          <div class="meta">
+            <span class="tag">Residencial</span>
+            <span class="muted">2024</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" tabindex="0" role="button"
+           data-title="Comercial - Local Central"
+           data-desc="Remodelación de local comercial con optimización de circulaciones y fachada activa."
+           data-img="https://via.placeholder.com/1200x800?text=Comercial+Local+Central">
+        <img class="thumb" src="https://tse1.mm.bing.net/th/id/OIP.-bM-aJn7Sl5WVc5J5JvuowHaFA?r=0&cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Comercial">
+        <div class="card-body">
+          <h3>Comercial — Local Central</h3>
+          <p class="muted">Rediseño integral para comercio minorista, 3200 m².</p>
+          <div class="meta">
+            <span class="tag">Comercial</span>
+            <span class="muted">2024</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reemplazado: edificio grande en vez de planta industrial -->
+      <div class="card" tabindex="0" role="button"
+           data-title="Edificio - Torre Central"
+           data-desc="Edificio de gran escala con 18 plantas, oficinas y amenities. Proyecto integral con criterios de eficiencia energética y materiales de alta durabilidad."
+           data-img="https://via.placeholder.com/1200x800?text=Edificio+Torre+Central">
+        <img class="thumb" src="https://tse1.mm.bing.net/th/id/OIP.GUqxc5XTAKIXU5cDV-xCPAHaLG?r=0&cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3">
+        <div class="card-body">
+          <h3>Edificio </h3>
+          <p class="muted">Obra de gran escala: torre de 18 plantas, 5.000 m², usos mixtos y standards LEED.</p>
+          <div class="meta">
+            <span class="tag">Edificio</span>
+            <span class="muted">2025</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- agregá más cards si querés -->
+    </div>
+  </section>
+
+  <!-- Lightbox modal -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <img id="modalImg" class="modal-img" alt="Proyecto">
+      <div class="modal-info">
+        <h4 id="modalTitle">Título</h4>
+        <p id="modalDesc" class="muted">Descripción del proyecto...</p>
+        <p style="margin-top:12px" class="muted">Categoría: <span id="modalTag"></span></p>
+      </div>
+      <button class="close" id="modalClose" aria-label="Cerrar">✕</button>
+    </div>
+  </div>
+
+  <script>
+    // Selección de elementos
+    const modal = document.getElementById('modal');
+    const modalImg = document.getElementById('modalImg');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalDesc = document.getElementById('modalDesc');
+    const modalTag = document.getElementById('modalTag');
+    const modalClose = document.getElementById('modalClose');
+
+    // Abrir modal con la info del card
+    function openModalFromCard(card){
+      const title = card.dataset.title || 'Proyecto';
+      const desc  = card.dataset.desc || '';
+      const img   = card.dataset.img || card.querySelector('img')?.src;
+      const tag = (card.querySelector('.tag')?.textContent) || '';
+
+      modalImg.src = img;
+      modalImg.alt = title;
+      modalTitle.textContent = title;
+      modalDesc.textContent = desc;
+      modalTag.textContent = tag;
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden','false');
+      modalClose.focus();
+    }
+
+    // Cerrar modal
+    function closeModal(){
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden','true');
+    }
+
+    // Delegación: agregar listener a todas las cards
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('click', () => openModalFromCard(card));
+      card.addEventListener('keypress', (e) => { if(e.key === 'Enter' || e.key === ' ') openModalFromCard(card); });
+    });
+
+    // Cerrar al click en close o fuera de la modal-card
+    modalClose.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => {
+      if(e.target === modal) closeModal();
+    });
+
+    // Cerrar con Escape
+    document.addEventListener('keydown', (e) => {
+      if(e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+    });
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>THE BLOCK — Materiales y Servicio Llave en Mano</title>
+  <style>
+    :root{
+      --bg:#0f1113;
+      --card:#151718;
+      --accent:#ff4500;
+      --muted:#bfc3c6;
+      --glass: rgba(255,255,255,0.03);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Inter, system-ui, Arial, sans-serif;
+      background:var(--bg);
+      color:#fff;
+      padding:36px 18px;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    .container{
+      max-width:1000px;
+      margin:0 auto;
+      background: linear-gradient(180deg, rgba(255,255,255,0.015), transparent);
+      border:1px solid rgba(255,255,255,0.04);
+      border-radius:12px;
+      padding:28px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+    }
+
+    .header {
+      display:flex;
+      gap:16px;
+      align-items:center;
+      margin-bottom:8px;
+    }
+    .logo {
+      width:64px;
+      height:64px;
+      border-radius:10px;
+      background:linear-gradient(135deg,var(--accent),#ff8a50);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      color:#111;
+      font-size:14px;
+    }
+    h1{
+      margin:0;
+      font-size:1.6rem;
+      letter-spacing:1px;
+    }
+    .subtitle{ margin:6px 0 18px; color:var(--muted); }
+
+    /* Info block */
+    .info {
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:18px;
+      margin-bottom:18px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.02);
+      border-radius:10px;
+      padding:16px;
+      border:1px solid rgba(255,255,255,0.03);
+    }
+    .card h2 { margin:0 0 8px; font-size:1.05rem; color:#fff; }
+    .card p { margin:0; color:var(--muted); line-height:1.45; font-size:0.98rem; }
+
+    .features {
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:12px;
+    }
+    .feature {
+      background: rgba(255,69,0,0.08);
+      color:var(--accent);
+      padding:8px 10px;
+      border-radius:8px;
+      font-size:0.88rem;
+    }
+
+    /* Materials list */
+    .materials-toggle{
+      margin-top:12px;
+      display:flex;
+      gap:10px;
+      align-items:center;
+    }
+    .btn {
+      background:var(--accent);
+      color:white;
+      border:none;
+      padding:8px 12px;
+      border-radius:8px;
+      cursor:pointer;
+      font-weight:600;
+      transition:transform .15s ease;
+    }
+    .btn:active { transform:scale(.98); }
+    .btn.secondary {
+      background:transparent;
+      border:1px solid rgba(255,255,255,0.06);
+      color:var(--muted);
+    }
+
+    .materials {
+      margin-top:14px;
+      display:none;
+      gap:12px;
+    }
+    .materials.open { display:block; }
+
+    .materials ul {
+      margin:0;
+      padding-left:18px;
+      color:var(--muted);
+      line-height:1.5;
+    }
+
+    .materials li { margin-bottom:8px; }
+
+    .footnote {
+      margin-top:14px;
+      font-size:0.85rem;
+      color:#9ea3a6;
+    }
+
+    /* small responsive */
+    @media (min-width:720px){
+      .info { grid-template-columns: 1fr 360px; }
+    }
+
+    /* simple fade */
+    .fade { animation: fadeIn .45s ease both; }
+    @keyframes fadeIn { from{opacity:0; transform:translateY(6px)} to{opacity:1; transform:none} }
+  </style>
+</head>
+<body>
+  <div class="container fade" role="region" aria-label="Materiales y servicio llave en mano">
+    <div class="header">
+      <div class="logo" aria-hidden="true">TB</div>
+      <div>
+        <h1>THE BLOCK — Materiales & Servicio Llave en Mano</h1>
+        <div class="subtitle">Empresa privada especializada en proyectos integrales, desde diseño hasta entrega operativa.</div>
+      </div>
+    </div>
+
+    <div class="info">
+      <!-- Columna principal -->
+      <div class="card" aria-live="polite">
+        <h2>Compromiso con la sostenibilidad y calidad constructiva</h2>
+        <p>
+          En <strong>THE BLOCK</strong> empleamos soluciones constructivas y materiales de bajo impacto ambiental que contribuyen a la eficiencia energética, durabilidad y reciclabilidad de las obras.
+          Nuestro servicio se entrega <strong>llave en mano</strong>, lo que implica la gestión integral del proyecto —diseño, cálculo, contratación, ejecución, control de calidad y puesta en marcha— garantizando cumplimiento de plazos y presupuestos.
+        </p>
+
+        <div class="features" aria-hidden="true">
+          <div class="feature">Proyecto y Dirección Técnica</div>
+          <div class="feature">Gestión de obra y calidad</div>
+          <div class="feature">Certificación y cumplimiento normativo</div>
+        </div>
+
+        <div class="materials-toggle">
+          <button class="btn" id="toggleMaterials" aria-expanded="false" aria-controls="materialsList">Ver materiales ecológicos usados</button>
+          <button class="btn secondary" onclick="downloadFicha()">Descargar ficha resumen</button>
+        </div>
+
+        <div id="materialsList" class="materials" role="region" aria-label="Lista de materiales">
+          <h2 style="margin-top:0">Materiales y soluciones constructivas (ejemplos)</h2>
+          <ul>
+            <li><strong>Madera maciza CLT (Cross-Laminated Timber):</strong> estructura prefabricada de baja huella de carbono, alta rigidez y reducida emisión de CO₂.</li>
+            <li><strong>Aceros reciclados y de alta resistencia:</strong> perfilería estructural proveniente de chatarra reciclada con procesos certificados.</li>
+            <li><strong>Hormigón reciclado y aditivos ecológicos:</strong> incorporación de áridos reciclados y adiciones que reducen la cementación y emisiones.</li>
+            <li><strong>Paneles sándwich aislantes (EPS/XPS o lana mineral):</strong> eficiencia térmica y reducción de pérdidas energéticas.</li>
+            <li><strong>Vidrios de alta eficiencia (doble o triple acristalamiento, bajo emisivo):</strong> control solar y térmico para confort interior y ahorro energético.</li>
+            <li><strong>Pinturas y revestimientos de bajo contenido en COV (Low-VOC):</strong> mejor calidad del aire interior y menor contaminación.</li>
+            <li><strong>Sistemas de cubierta verde y paneles fotovoltaicos:</strong> gestión de aguas pluviales, aislamiento y generación de energía renovable in situ.</li>
+            <li><strong>Sistemas de climatización y ventilación de alta eficiencia (VRF, recuperadores de calor):</strong> reducción del consumo energético operativo.</li>
+            <li><strong>Materiales prefabricados y modulares:</strong> disminución de residuos en obra y mayor control de calidad en taller.</li>
+          </ul>
+
+          <div class="footnote">
+            Nota: la selección final de materiales se define en la etapa de proyecto ejecutivo, según especificaciones técnicas, normativas locales y disponibilidad. Podemos proporcionar fichas técnicas y certificados de origen al cliente.
+          </div>
+        </div>
+      </div>
+
+      <!-- Columna secundaria -->
+      <div class="card">
+        <h2>Servicio Llave en Mano</h2>
+        <p>
+          Entregamos proyectos llave en mano bajo contratos con alcance definido: alcance técnico, cronograma, hitos de pago y garantías. Nuestro proceso incluye:
+        </p>
+        <ul style="color:var(--muted); padding-left:18px; margin-top:10px; line-height:1.45;">
+          <li>Estudio de factibilidad y programa de necesidades.</li>
+          <li>Proyecto conceptual y ejecutivo (BIM opcional).</li>
+          <li>Planeamiento de obra, compras y contratación.</li>
+          <li>Dirección de obra, control de calidad y seguridad industrial.</li>
+          <li>Pruebas funcionales, entrega y puesta en marcha.</li>
+        </ul>
+
+        <p style="margin-top:12px; color:var(--muted); font-size:0.92rem;">
+          Para obtener la ficha técnica completa de materiales o una propuesta específica, contactanos y coordinamos una reunión técnica.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const toggleBtn = document.getElementById('toggleMaterials');
+    const materials = document.getElementById('materialsList');
+
+    toggleBtn.addEventListener('click', () => {
+      const open = materials.classList.toggle('open');
+      toggleBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggleBtn.textContent = open ? 'Ocultar materiales' : 'Ver materiales ecológicos usados';
+      // enfoque accesible
+      if(open) materials.querySelector('h2')?.focus();
+    });
+
+    function downloadFicha(){
+      // Genera una ficha resumen simple y la descarga como .txt (puedes reemplazar con PDF server-side)
+      const text = `THE BLOCK — Ficha Resumen de Materiales\n\n` +
+        `Materiales: CLT, aceros reciclados, hormigón reciclado, paneles sándwich, vidrios eficientes, pinturas low-VOC, cubiertas verdes, paneles fotovoltaicos, sistemas HVAC eficientes, prefabricados.\n\n` +
+        `Contacto: correo@theblock.com | +54 9 11 1234 5678\n\n` +
+        `La selección final se define en proyecto ejecutivo.`;
+      const blob = new Blob([text], { type: 'text/plain' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'ficha_materiales_theblock.txt';
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    }
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestros Valores</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #e0e0e0;
+            background-color: #121212;
+            line-height: 1.6;
+        }
+        
+        h1 {
+            color: #ff6d00;
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #ff6d00;
+            padding-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        h3 {
+            color: #ff6d00;
+            margin-top: 25px;
+            font-weight: 600;
+        }
+        
+        .value-item {
+            background-color: #1e1e1e;
+            border-left: 4px solid #ff6d00;
+            padding: 15px;
+            margin: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .value-title {
+            font-weight: bold;
+            color: #ff6d00;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+        
+        .divider {
+            border: 0;
+            height: 1px;
+            background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(255, 109, 0, 0.75), rgba(0,0,0,0));
+            margin: 30px 0;
+        }
+        
+        .commitment {
+            background-color: #2a2a2a;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 25px 0;
+            border: 1px solid #ff6d00;
+        }
+        
+        .code-ethics {
+            font-style: italic;
+            text-align: center;
+            margin-top: 40px;
+            color: #b0b0b0;
+            border-top: 1px dashed #ff6d00;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Nuestros Valores</h1>
+    
+    <div class="value-item">
+        <div class="value-title">Excelencia</div>
+        <p>Buscamos la máxima calidad en todo lo que hacemos.</p>
+    </div>
+    
+    <hr class="divider">
+    
+    <div class="commitment">
+        <h3>Nos comprometemos con la sustentabilidad</h3>
+        <p>Entendemos al desarrollo sostenible en sus tres dimensiones: económica, social y ambiental.</p>
+    </div>
+    
+    <hr class="divider">
+    
+    <div class="value-item">
+        <div class="value-title">Equidad de género</div>
+        <p>Promovemos la diversidad a través de todos nuestros programas.</p>
+    </div>
+    
+    <div class="code-ethics">
+        <h3>Nuestro Código de Ética y Conducta</h3>
+        <p>Contiene estos valores además de los principios y normas que guían nuestra manera de actuar. Podés encontrarlo en nuestra web.</p>
+    </div>
+</body>
+</html>
